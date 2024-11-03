@@ -7,12 +7,25 @@
         </div>
       </div>
 
-    <div class="row">
+    <div class="row mb-2">
         <div class="col-6">
             <button type="button" class="btn btn-primary tombolTambahData" data-bs-toggle="modal" data-bs-target="#formModal">
                Tambah Data Maasiswa
             </button>
-            <br><br>
+            </div>
+              </div>
+    <div class="row mb-2">
+        <div class="col-lg-6">
+        <form action="<?= BASEURL; ?>"/mahasiswa/cari" method="post">
+        <div class="input-group">
+        <input type="text" class="form-control" placeholder="cari mahasiswa" name="keyword" id="keyword" autocomplete="off">
+        <button class="btn btn-primary" type="submit" id="tombolCari">Cari</button>
+    </div>
+    </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
             <h3>Daftar Mahasiswa</h3>
             <ul class="list-group">
             <?php foreach($data['mhs'] as $mhs) : ?>
